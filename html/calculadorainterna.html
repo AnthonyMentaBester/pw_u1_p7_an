@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthony Narvaez</title>
+    <script>
+        function cambiarTexto(idelemento, valor) {
+            document.getElementById(idelemento).innerText = valor;
+
+        }
+        function cambiarColor(idelemento, valor) {
+            document.getElementById(idelemento).style.color = valor;
+
+        }
+        function cambiarTamanio(idelemento, valor) {
+            document.getElementById(idelemento).style.fontSize = valor;
+
+        }
+        function agregarElemento(idelemento, valor) {
+            document.getElementById(idelemento).innerHTML = document.getElementById(idelemento).innerHTML + valor;
+
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <nav>
+        <ul id="idmenu">
+            <li>Calculadora 1 </li>
+            <li>Calculadora 2 </li>
+            <li>Calculadora 3 </li>
+        </ul>
+
+    </nav>
+    <section>
+        <label id="label1" for="numero1">N&#250;mero 1</label>
+        <input id="numero1" type="number">
+        <label id="label2" for="numero2">N&#250;mero 1</label>
+        <input id="numero2" type="number">
+
+        <br>
+        <br>
+        <button onclick="cambiarColor('label2','green')"> Cambiar color 2</button>
+        <button onclick="cambiarColor('label1','red')"> Cambiar color 1</button>
+        <button onclick="cambiarTamanio('label2','80px')"> Cambiar Tama&#241;o</button>
+        <button onclick="cambiarTexto('label1','nuevo primer n&#250;mero')"> Cambiar texto 1</button>
+        <button onclick="cambiarTexto('label2','nuevo segundo n&#250;mero')"> Cambiar texto 2</button>
+        <button onclick="agregarElemento('idmenu','<li>Calculadora 4 </li>')"> agregar elemento</button>
+
+    </section>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
