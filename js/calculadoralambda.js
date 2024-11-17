@@ -64,7 +64,7 @@ const conceptosJS = () => {
     const miEstudiante = {
         nombre: "Anthony",
         apellido: "Narvaez",
-        edad: 23,
+        edad: 25,
         genero: "Masculino",
         ciudad: "Quito"
     };
@@ -101,4 +101,124 @@ const conceptosJS = () => {
     } else {
         console.log("Estos no son lo mismo");
     }
+
+    //Arreglo de objetos
+    const est1 = {
+        nombre: "Anthony",
+        apellido: "Narvaez",
+        edad: 25
+    }
+    const est2 = {
+        nombre: "Josue",
+        apellido: "Romero",
+        edad: 13
+    }
+    const est3 = {
+        nombre: "fannie",
+        apellido: "Sofia",
+        edad: 21
+    }
+    const arregloEstudiantes = [est1, est2, est3];
+    console.log(arregloEstudiantes);
+    console.log(arregloEstudiantes[1]);
+    console.log(arregloEstudiantes[1].nombre);
+
+    const arregloEstuadiantes2 = [{ nombre: "Miguel", apellido: "Heberon", edad: 45 },
+    { nombre: "Andrea", apellido: "Guayaquil", edad: 23 },
+    { nombre: "krisyel", apellido: "Ramos", edad: 66 },
+    { nombre: "Cristian", apellido: "Tobar", edad: 45 },
+    { nombre: "Alejandro", apellido: "Marquez", edad: 12 }
+    ]
+    console.log(arregloEstuadiantes2);
+    console.table(arregloEstuadiantes2);
+
+    //uso del pop elimina el utlimo elemento que esta en el array
+    console.log("Uso del pop");
+    const estudiante = arregloEstuadiantes2.pop();
+    console.log(estudiante);
+
+    console.table(arregloEstuadiantes2);
+
+
+    //Desestructuracion de arreglos
+    //separa en partes cada una de la las pocisiones del arreglo
+    const colores = ['Amarillo', 'Azul', 'Verde', 'Rojo', 'Rosado'];
+    const [c1, c2, c3, c4, c5] = colores;
+    console.log(c1);
+    console.log(c2);
+    console.log(c3);
+    console.log(c4);
+    console.log(c5);
+
+    const [m1, m2, m3, m4, m5, m6, m7, m8] = ['enero', 'febrero', 'marzo', 'abril', 'mayo'];
+    console.log(m1);
+    console.log(m2);
+    console.log(m5);
+    console.log(m8);
+
+    const [, mes2, , , mes5] = ['enero', 'febrero', 'marzo', 'abril', 'mayo'];
+
+    console.log(mes2);
+    console.log(mes5);
+
+    //Desestructuracion de objetos
+    console.log("Desestructuracion de objetos");
+
+    const automovil = {
+        marca: 'Toyota',
+        modelo: 'Pruis',
+        anio: 2024,
+        color: 'plateado'
+    }
+
+    //no importa el orden viene dado por nombre que tiene el atributo mas no por la posicion en la que se ecuntra
+    const { modelo, anio, color, marca } = automovil;
+    console.log(marca);
+    console.log(modelo);
+    console.log(anio);
+    console.log(color);
+
+    desestructuracion(automovil);
+    const { nombreP, raza, estatura } = { nombreP: "Perro", raza: "pastor", estatura: 120 };
+    console.log(nombreP);
+    console.log(raza);
+    console.log(estatura);
+
+    //EJEMPLO DESESTRUCTURAR EN CLASE 
+
+    const universidad = {
+        nombreU: "UCE",
+        estudiantes: 485566755,
+        rector: {
+            nombreR: "FELIPE",
+            apellidoR: "BORJA"
+        }
+    }
+
+    /*
+    //En dos pasos
+    const {estudiantes,nombre,rector}=universidad;
+    const{nombreR}= rector;
+    console.log(nombreR);
+    */
+    const { estudiantes, nombreU, rector: { nombreR, apellidoR } } = universidad;
+    console.log(nombreR);
+    console.log(apellidoR);
+
+
+
 }
+
+//const desestructuracion = (automovil) => {
+const desestructuracion = ({ modelo, anio, color, marca }) => {
+    console.log(marca);
+    console.log(modelo);
+    console.log(anio);
+    console.log(color);
+
+}
+
+
+
+
+
