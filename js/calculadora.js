@@ -11,32 +11,24 @@ function setearvalor(valor){
     document.getElementById('id-display').innerText=valor;
 }
 
-function setearvalorConcatenado(valor) {
-    let valorActual = document.getElementById("id-display").innerText;
-    if (valorActual === `${numero1}${op}`) {
-        document.getElementById('id-display').innerText += valor;
-    } else if (valorActual === "0") {
-        document.getElementById('id-display').innerText = valor;
-    } else {
-        document.getElementById('id-display').innerText += valor;
-    }
+function setearvalorConcatenado(valor){
+    let valorActual = document.getElementById('id-display').innerText;
+    console.log(valorActual);
+    
+    document.getElementById('id-display').innerText = valor;
 }
 
 
 
 function operacion(valor) {
     const valorActual = document.getElementById("id-display");
-
     if (numero1 === "") {
         numero1 = valorActual.innerText;
     } else if (respuesta !== "") {
         numero1 = respuesta.toString();
-        respuesta = ""; 
     }
     op = valor;
-    if (!valorActual.innerText.includes(op)) {
-        valorActual.innerText += valor;
-    }
+    valorActual.innerText += valor;
 }
 
 
@@ -88,7 +80,7 @@ function calcular() {
             respuesta = valor;
     }
 
-    valorActual.innerText = `${numero1}${op}${numero1} = ${respuesta}`;
+    valorActual.innerText = `${numero1}${op}${numero2} = ${respuesta}`;
     numero1 = "";
     numero2 = "";
     op = "";
