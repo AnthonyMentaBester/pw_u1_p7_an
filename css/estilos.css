@@ -11,7 +11,7 @@
     padding: 45px;
     /*border: solid blue;*/
     border-radius: 35px;
-    background-color: rgb(172, 201, 221);
+    background-color: rgb(72, 80, 85);
     box-shadow: 15px 10px 5px 5px rgb(44,44,44);
 }
 
@@ -19,18 +19,50 @@
     grid-column: span 4;
     padding: 15px;
     margin-bottom: 10px;
-    background-color: rgb(230, 230, 248);
+    background-color: rgb(233, 233, 233);
     border-radius: 35px;
     text-align: right;
     color: black;
     font-size: 35px;
 }
+.marca{
+    margin-left: 75px;
+    grid-template-columns: 4;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+}
 
 #numc{
     grid-column: span 2;
+    
 }
 
 #num0{
     grid-column: span 2;
+    background-color: orange;
+}
+
+button {
+    cursor: pointer;
+    margin: 3px;
+    padding: 5px;
+    border-radius: 20px;
+    /*border: none;*/
+    color: white;
+    background-color: rgb(32, 30, 30);
+    font-size: 25px;
+    box-shadow: 1px 1px 1px 1px rgb(179, 179, 179);
+}
+
+
+
+
+button:hover{
+    background-color: rgb(247, 157, 39);
+}
+
+button:active{
+    background: rgb(187, 137, 0);
 }
 
